@@ -1,4 +1,22 @@
 let calcBtn = document.getElementById("calcBtn");
+const heightSlider = document.getElementById("heightSlider");
+const weightSlider = document.getElementById("weightSlider");
+const height = document.getElementById("height");
+const weight = document.getElementById("weight");
+
+heightSlider.addEventListener("input", function () {
+  document.getElementById("height").value = heightSlider.value;
+});
+weightSlider.addEventListener("input", function () {
+  document.getElementById("weight").value = weightSlider.value;
+});
+
+height.addEventListener("input", function () {
+  heightSlider.value = this.value;
+});
+weight.addEventListener("input", function () {
+  weightSlider.value = this.value;
+});
 
 calcBtn.addEventListener("click", function () {
   const height = document.getElementById("height").value;
