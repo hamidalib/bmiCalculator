@@ -13,4 +13,4 @@ This is a personal project where I plan to **experiment** and add more **feature
 - CSS3
 - JavaScript (Vanilla)
 
-  ![My Screenshot](https://example.com/images/my_screenshot.png)
+  ![App Screenshot](bmiCalculator/appScreenShot.png)
