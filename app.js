@@ -2,7 +2,9 @@ let calcBtn = document.getElementById("calcBtn");
 const heightSlider = document.getElementById("heightSlider");
 const weightSlider = document.getElementById("weightSlider");
 const height = document.getElementById("height");
+const toastContainer = document.getElementById("toastContainer");
 const weight = document.getElementById("weight");
+let bmiMsg = document.getElementById("bmiMsg");
 
 heightSlider.addEventListener("input", function () {
   document.getElementById("height").value = heightSlider.value;
@@ -58,4 +60,11 @@ calcBtn.addEventListener("click", function () {
     bmiCat.innerHTML = "Obesity";
     bmiCat.style.color = "#F87171";
   }
+
+  toastContainer.classList.remove("hidden");
+  bmiMsg.innerHTML = `Your BMI is ${result.toFixed(2)}.`;
+
+  setTimeout(() => {
+    toastContainer.classList.add("hidden");
+  }, 3000);
 });
